@@ -3,6 +3,7 @@ import "./globals.css";
 import "./fonts.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
+import { Analytics } from "@vercel/analytics/next";
 
 /**
  * Font loading note: in a normal deployment (Vercel or any standard host)
@@ -73,6 +74,7 @@ export default function RootLayout({
           <CustomCursor />
           {children}
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
