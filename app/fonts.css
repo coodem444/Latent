@@ -1,0 +1,49 @@
+/**
+ * ============================================================
+ * LATENT — Typography fallback (offline sandbox build)
+ * ============================================================
+ *
+ * This project is designed around three roles:
+ *   --font-display : Inter, weight 800-900, tight tracking — headlines
+ *   --font-body    : Inter, weight 400-600 — running text
+ *   --font-mono    : IBM Plex Mono — eyebrows, data, benchmarks
+ *
+ * In a normal deployment, restore the exact typefaces by deleting this
+ * file's @font-face-free variables below and using next/font/google in
+ * app/layout.tsx instead:
+ *
+ *   import { Inter, IBM_Plex_Mono } from "next/font/google";
+ *
+ *   const inter = Inter({
+ *     subsets: ["latin"],
+ *     variable: "--font-display",
+ *     weight: ["500","600","700","800","900"],
+ *   });
+ *   const interBody = Inter({
+ *     subsets: ["latin"],
+ *     variable: "--font-body",
+ *     weight: ["400","500","600"],
+ *   });
+ *   const plexMono = IBM_Plex_Mono({
+ *     subsets: ["latin"],
+ *     variable: "--font-mono",
+ *     weight: ["400","500","600"],
+ *   });
+ *
+ * Then apply `${inter.variable} ${interBody.variable} ${plexMono.variable}`
+ * to the <html> className, exactly as commented in layout.tsx.
+ *
+ * Until then, this file provides the same three variables against a
+ * high-quality native system stack so the build runs with zero external
+ * network requests.
+ * ============================================================
+ */
+
+:root {
+  --font-display: -apple-system, "SF Pro Display", "Segoe UI Variable", "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, "SF Pro Text", "Segoe UI Variable", "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Cascadia Code", "Segoe UI Mono", Consolas, "Roboto Mono",
+    Menlo, monospace;
+}
